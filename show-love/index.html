@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <meta name="author" content="ShaoZeMing,szm19920426@gmail.com beijing" />
+
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <link rel="apple-touch-icon-precomposed" href="./public/1.png" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>For you</title>
+    <style type="text/css">
+      body {
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+        font-size: 25px;
+        color: #fff;
+        font-family: "Times New Roman", Times, serif;
+        background: #f3961c;
+      }
+      div {
+        text-align: left;
+      }
+      .tittle {
+        width: 100%;
+        background: #f3961c;
+        top: 0px;
+        height: 100%;
+        z-index: 0;
+        position: absolute;
+        position: fixed !important;
+        display: none;
+        cursor: default;
+      }
+
+      .big {
+        font-family: "Times New Roman", Times, serif;
+        color: #fff;
+        font-size: 35px;
+      }
+      .tishi {
+        position: absolute;
+        position: fixed !important;
+        z-index: 99;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+      }
+      .tishiContent {
+        border: 1px solid #fff;
+        font-size: 18px;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    </style>
+    <script type="text/javascript" src="./jscss/jquery.min.js"></script>
+    <script>
+      $(document).ready(function (e) {
+        $(document).scrollTop(300);
+        timer = setInterval("$.change()", 3000);
+        t = 2;
+        $("#t-" + t).fadeIn();
+        $(document).click(function () {
+          clearInterval(timer);
+          $.change();
+        });
+        $.change = function () {
+          t++;
+          if (t <= $(".tittle").length) {
+            $(".tittle").slideUp(1500).fadeOut();
+            $("#t-" + t)
+              .slideDown(1500)
+              .fadeIn();
+          } else {
+            localStorage["index"] = "1";
+            window.location = "index2.html";
+          }
+        };
+      });
+    </script>
+  </head>
+
+  <body>
+    <section style="text-align: center">
+      <div class="tittle" id="t-1" style="display: none">
+        <table width="100%" border="0" height="100%">
+          <tbody>
+            <tr>
+              <td align="center">
+                <span class="big">I have a confession</span>for you
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tittle" id="t-2" style="display: block">
+        <table width="100%" border="0" height="100%">
+          <tbody>
+            <tr>
+              <td align="center"><span class="big">Today is a special</span>day</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tittle" id="t-3" style="">
+        <table width="100%" border="0" height="100%">
+          <tbody>
+            <tr>
+              <td align="center">Hey!<span class="big">   who·······</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tittle" id="t-4" style="">
+        <table width="100%" border="0" height="100%">
+          <tbody>
+            <tr>
+              <td align="center">I want to say you...<span class="big">that</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tittle" id="t-5" style="">
+        <table width="100%" border="0" height="100%">
+          <tbody>
+            <tr>
+              <td align="center">
+                <br />
+                <span class="big">I like you from a long time</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tittle" id="t-6" style="">
+        <table width="100%" border="0" height="100%">
+          <tbody>
+            <tr>
+              <td align="center">
+                <br />I miss you, miss<span class="big">you</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <div align="center" class="tishi">
+      <span class="tishiContent">touch screen to continue</span>
+    </div>
+  </body>
+</html>
