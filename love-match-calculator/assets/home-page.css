@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 173, 229);
+}
+
+h1 {
+  font-family: "Playball", cursive;
+  font-size: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(190, 37, 83);
+}
+h2 {
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+.calculate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(190, 37, 83);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 9px dotted rgb(18, 16, 16);
+  padding-bottom: 5em;
+}
+
+.row {
+  width: 100%;
+  margin-top: 5em;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 5em;
+}
+
+#percent-amnt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#percent-amnt h3 {
+  text-shadow: 2px 8px 18px rgb(175, 55, 101);
+  font-size: 9em;
+}
+
+.hidden {
+  display: none;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#love-calculator a:hover {
+  background-color: rgb(255, 56, 56);
+}
+#your_name {
+  padding-left: 4cm;
+  font-size: 40px;
+}
+#their_name {
+  padding-left: 4cm;
+  font-size: 40px;
+}
+
+#your_name:hover {
+  background-color: rgb(255, 105, 150);
+}
+
+#their_name:hover {
+  background-color: rgb(255, 105, 150);
+}

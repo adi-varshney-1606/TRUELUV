@@ -1,0 +1,140 @@
+:root {
+    --pink-light: #ff7eb4;
+    --pink: #ff2581;
+  }
+
+
+
+body {
+    background-color: pink;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: white;
+    text-shadow: 1px 1px 5px black;
+
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	transform: scale(1);
+	animation: pulse 2s infinite;
+
+}
+
+/* h1 Pulse effect */
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);	
+	}
+
+	70% {
+		transform: scale(1);	
+	}
+
+	100% {
+		transform: scale(0.95);	
+	}
+}
+
+#content-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10em;
+}
+
+/* Heart */
+.container {
+    position: relative;
+    animation: .8s beat infinite;
+  }
+      
+  .heart {
+    position: relative;
+    background-color: red;
+    display: inline-block;
+    height: 60px;
+    top:0;
+    left:0;
+    transform: rotate(-45deg);
+    width:60px;
+    margin: 10em;
+  }
+
+  /* Heart Pulse effect */
+  .heart:before, .heart:after {
+    content:"";
+    background-color: red;
+    border-radius:50%;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    width: 60px;
+    }
+    
+  .heart:before {
+    top:-30px;
+    left:0;}
+    
+  .heart:after {
+    left:30px;
+    top:0;}
+    
+  @keyframes beat {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.1);
+    }
+    40% {
+      transform: scale(1);
+    }
+    60% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  
+
+
+/* Gallery Style */
+.gallery-expand .gallery-curve-wrapper {
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px #0000001a;
+    background: white;
+    padding-top: 20px;
+    
+}
+
+
+.btn-large {
+    margin-bottom: 20px;
+    border-radius: 40px;
+    background-color: palevioletred;
+    font-weight: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    
+}
+
+/* Modal */
+
+.modal-trigger {
+    margin-top: 2em;
+    background-color: rgb(238, 27, 238);
+}
+
+.play-again {
+  margin-top: 8em;
+  background-color: lightpink;
+  border: 3px dotted rgb(231, 28, 225);
+  border-radius: 2em;
+}
+
+
+
+
+
